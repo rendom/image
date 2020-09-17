@@ -142,7 +142,6 @@ class Decoder extends \Intervention\Image\AbstractDecoder
         $transparent = imagecolorallocatealpha($canvas, 255, 255, 255, 127);
         imagefilledrectangle($canvas, 0, 0, $width, $height, $transparent);
         imagecolortransparent($canvas, $transparent);
-        imagealphablending($canvas, true);
 
         // copy original
         imagecopy($canvas, $resource, 0, 0, 0, 0, $width, $height);
